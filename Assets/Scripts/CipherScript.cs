@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class CipherScript : MonoBehaviour
 {
+    public string[] letters = new string[26] {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+
     public Text Inputs;
     public int numberLength;
 
