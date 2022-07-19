@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class SafeController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public TMPro.TextMeshProUGUI text;
+
+    public int ButtonValue0;
+    public int ButtonValue1;
+    public int ButtonValue2;
+    public int ButtonValue3;
+    
+
+
+    public void InputButton(int PIN)
     {
-        
+        if (text.text.Length < 4)
+        {
+            text.text += PIN;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Backspace()
     {
-        
+        text.text = "";
+    }
+
+    public void Enter()
+    {
+
     }
 }
