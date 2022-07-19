@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class SimonSays : MonoBehaviour
 {
+    
+    [SerializeField] Button[] button;
+    [Header("Colour Order")]
+    [SerializeField] List<int> colourOrder;
+    
     public ButtonSettings[] gameButtons;
 
     public float[] seq1 = new float[1] { 2 };
@@ -17,12 +22,25 @@ public class SimonSays : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayGame();
         gameButtons[4] = new ButtonSettings();
 
         for (int i = 0; i < gameButtons.Length; i++)
         {
 
         }
+    }
+    void PlayGame()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            PickRandomColour();
+        }
+    }
+
+    void PickRandomColour()
+    {
+
     }
 
     // Update is called once per frame
@@ -43,4 +61,7 @@ public class SimonSays : MonoBehaviour
     public void GameOver()
     {
     }
+
+
+
 }

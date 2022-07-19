@@ -7,8 +7,11 @@ public class ButtonSettings : MonoBehaviour
 {
     public Color normalColor;
     public Color highlightColor;
+    public int index;
 
-    float resetDelay = .25f;
+    public float resetDelay = .25f;
+
+    [SerializeField] private SimonSays2 simonSays; 
 
     private void Start()
     {
@@ -16,6 +19,12 @@ public class ButtonSettings : MonoBehaviour
     }
 
     public void OnMouseDown()
+    {
+        simonSays.ButtonPressed(index);
+        LightUpButton();
+    }
+
+    public void LightUpButton()
     {
         GetComponent<MeshRenderer>().material.color = highlightColor;
         Invoke("ResetButton", resetDelay);
