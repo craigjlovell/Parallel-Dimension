@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     SceneManager sceneManager;
-    Canvas Canvas = null;
+    Canvas canvas = null;
 
 
     // Start is called before the first frame update
@@ -26,8 +26,30 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("ParallelDimension");
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
+
     public void Exit()
     {
         Application.Quit();
+    }
+
+    public void GamePause()
+    {
+        Time.timeScale = 0;
+        canvas = GetComponentInParent<Canvas>();
+        canvas.enabled = false;
+        canvas = GameObject.FindGameObjectWithTag("Pause").GetComponent<Canvas>();
+        canvas.enabled = true;
+    }
+    public void GameResume()
+    {
+        Time.timeScale = 1;
+        canvas = GetComponentInParent<Canvas>();
+        canvas.enabled = false;
+        canvas = GameObject.FindGameObjectWithTag("Game").GetComponent<Canvas>();
+        canvas.enabled = true;
     }
 }
