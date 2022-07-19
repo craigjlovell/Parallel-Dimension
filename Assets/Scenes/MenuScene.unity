@@ -636,6 +636,7 @@ GameObject:
   - component: {fileID: 1114803161}
   - component: {fileID: 1114803160}
   - component: {fileID: 1114803159}
+  - component: {fileID: 1114803162}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -707,9 +708,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 492504723}
-        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 1114803162}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -757,6 +758,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114803157}
   m_CullTransparentMesh: 1
+--- !u!114 &1114803162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114803157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c586851d6935d408fe30cedce1b56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1536151214
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +782,7 @@ GameObject:
   - component: {fileID: 1536151218}
   - component: {fileID: 1536151217}
   - component: {fileID: 1536151216}
+  - component: {fileID: 1536151219}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -840,9 +854,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 492504723}
-        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
-        m_MethodName: BeginGame
+      - m_Target: {fileID: 1536151219}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -890,6 +904,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536151214}
   m_CullTransparentMesh: 1
+--- !u!114 &1536151219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536151214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c586851d6935d408fe30cedce1b56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1942499867
 GameObject:
   m_ObjectHideFlags: 0

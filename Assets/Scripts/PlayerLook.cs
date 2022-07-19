@@ -33,11 +33,11 @@ public class PlayerLook : MonoBehaviour
             mouseY = Input.GetAxis("Mouse Y") * mouseSpeed * Time.deltaTime;
             if (canvas.enabled == true)
             {
-                //Cursor.lockState = CursorLockMode.Locked;
+                Cursor.lockState = CursorLockMode.Locked;
             }
             else
             {
-                //Cursor.lockState = CursorLockMode.Confined;
+                Cursor.lockState = CursorLockMode.Confined;
             }
         }
         else if (useKeyboard == true)
@@ -46,11 +46,11 @@ public class PlayerLook : MonoBehaviour
             mouseY = Input.GetAxis("VertY") * mouseSpeed * Time.deltaTime;
             if (canvas.enabled == true)
             {
-                //Cursor.lockState = CursorLockMode.Locked;
+                Cursor.lockState = CursorLockMode.Locked;
             }
             else
             {
-                //Cursor.lockState = CursorLockMode.Confined;
+                Cursor.lockState = CursorLockMode.Confined;
             }
         }
 
