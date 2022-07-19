@@ -1111,11 +1111,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c56248643bab94b87f07ced07fb85a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  words:
-  - trippy
+  codeAnswer: ' '
+  codeTry: filler
+  noteNum: 
   number: 
-  code: 
+  trys: 3
   inputs: {fileID: 157547376}
+  fire: 0
 --- !u!114 &540621022
 MonoBehaviour:
   m_ObjectHideFlags: 0
