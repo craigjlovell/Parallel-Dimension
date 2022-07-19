@@ -6,30 +6,71 @@ using TMPro;
 
 public class CipherScript : MonoBehaviour
 {
-    public string[] words = new string[1] { "trippy"};
+    [SerializeField] private string[] words = new string[5] { "trippy", "dreaming", "puzzle", "ethereal", "liminal" };
+
+    [SerializeField] private string codeAnswer;
+    [SerializeField] private string codeTry = "filler";
+
+    [SerializeField] private List<int> noteNum = new List<int>();
+    string notes;
+
     public List<int> number = new List<int>();
 
-    public string code = "test";
+    public int trys = 3; 
 
     public TextMeshProUGUI inputs;
     public bool fire = false;
 
+    private void Start()
+    {
+        codeAnswer = words[Random.Range(0,5)];
+        notes = codeAnswer;
+
+        if (noteNum.Count < notes.Length)
+        {
+            for (int i = 0; i < notes.Length; i++)
+            {
+                noteNum.Add((int)notes[i] - 'a');
+            }
+        }
+    }
+
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         KeyPressed();
+        
 
-        if (code != "test")
-        {
-            for (int i = 0; i < words.Length; i++)
+        notes = codeAnswer;
+        if (trys > 0)
+        {            
+            if (codeTry != "filler")
             {
-                if (code == words[i].ToString())
+                for (int i = 0; i < 5; i++)
                 {
-                    print("you win");
+                    if (codeTry == codeAnswer)
+                    {
+                        print("you win");
+                    }
+                    else if (codeTry != codeAnswer && codeTry != "filler")
+                    {
+                        trys--;
+                        codeTry = "filler";
+                        number.Clear();
+                        inputs.text = "";
+                        break;
+                    }
                 }
             }
         }
-        
+        else if (trys <= 0)
+            print("GameOver");
+
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            number.RemoveAt(number.Count - 1);
+            notes.Remove(notes.Length - 1);
+        }        
     }
 
     public void KeyPressed()
@@ -55,21 +96,17 @@ public class CipherScript : MonoBehaviour
                 numT = numT - 97;
                 number.Add(numT);
             }
-
-            
-            
-            //inputs.text += Input.inputString;            
-            //print(numT);
         }        
     }
 
     public void Save()
     {
-        code = inputs.text;
+        codeTry = inputs.text;
         fire = true;
+
         for (int i = 0; i < number.Count; i++)
         {
-            print(number[i]);
+            print(number[i].ToString());
         }        
     }
 }
