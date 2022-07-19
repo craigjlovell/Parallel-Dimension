@@ -49,7 +49,7 @@ public class SimonSays : MonoBehaviour
 
     }
 
-    public void ButtonCreating(int index, Vector3 position)
+    public void ButtonCreating()
     {
 
     }
