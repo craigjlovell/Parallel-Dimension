@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c9fb274f9622f724480e0d2edd6de276
+guid: 1cedccd5c337380429416add42e6a5e2
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_Pillow
-    second: {fileID: 2100000, guid: 3b6fda2ed0aa85542a2bc0a834635ca6, type: 2}
+      name: M_Door
+    second: {fileID: 2100000, guid: 3983de7f502fcd440984c784a0ca6544, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 401467319784863009}
   - component: {fileID: 2483378057539518955}
   m_Layer: 0
-  m_Name: SM_Wardrobe
+  m_Name: PF_Wardrobe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 174e543d6ec566e42a82434b0d5ed5fb, type: 3}
+  - {fileID: 2100000, guid: 521fc982bf0a5134ab2d7298fe88081c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
