@@ -98,7 +98,7 @@ public class CipherScript : MonoBehaviour
                 char letterT = Input.inputString[0];
                 int numT = (int)letterT;
                 inputs.text += c;
-                numT = numT - 97;
+                numT = numT - 'a';
                 number.Add(numT);
             }
         }        
