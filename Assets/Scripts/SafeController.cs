@@ -15,6 +15,7 @@ public class SafeController : MonoBehaviour
     public SimonSays2 simonSays;
     public int index = 0;
     public int trueCheck;
+    public GameObject safeDoor;
 
 
     public void InputButton(int PIN)
@@ -70,7 +71,7 @@ public class SafeController : MonoBehaviour
         }
         if (trueCheck == 3)
         {
-            Debug.Log("win");
+            safeDoor.SetActive(false);
             text.text = "";
         }
         else

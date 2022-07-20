@@ -14,6 +14,9 @@ public class CipherScript : MonoBehaviour
     [SerializeField] private List<int> noteNum = new List<int>();
     string notes;
 
+    TextMeshProUGUI riddleText;
+    string riddle = "the answer you seek is hidden on the walls";
+
     public List<int> number = new List<int>();
 
     public int trys = 3; 
@@ -55,7 +58,7 @@ public class CipherScript : MonoBehaviour
                 {
                     if (codeTry == codeAnswer)
                     {
-                        print("you win");
+                        riddleText.text = riddle;
                     }
                     else if (codeTry != codeAnswer && codeTry != "filler")
                     {

@@ -51,7 +51,7 @@ public class LockAndDoor : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if(Physics.Raycast(ray, out hit, 100.0f))
