@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2167426056652312235}
   - component: {fileID: 4175058725028969057}
   m_Layer: 0
-  m_Name: Shelf
+  m_Name: PF_Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: c434730cc6d791e4aa4fd8e02adc76a9, type: 3}
+  - {fileID: 2100000, guid: f5e88945a135f7c4487e98511c952e5e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
