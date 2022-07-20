@@ -31,27 +31,27 @@ public class PlayerLook : MonoBehaviour
         {
             mouseX = Input.GetAxis("Mouse X") * mouseSpeed * Time.deltaTime;
             mouseY = Input.GetAxis("Mouse Y") * mouseSpeed * Time.deltaTime;
-            if (canvas.enabled == true)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Confined;
-            }
+            //if (canvas.enabled == true)
+            //{
+            //    Cursor.lockState = CursorLockMode.Locked;
+            //}
+            //else
+            //{
+            //    Cursor.lockState = CursorLockMode.Confined;
+            //}
         }
         else if (useKeyboard == true)
         {
             mouseX = Input.GetAxis("HozX") * mouseSpeed * Time.deltaTime;
             mouseY = Input.GetAxis("VertY") * mouseSpeed * Time.deltaTime;
-            if (canvas.enabled == true)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Confined;
-            }
+            //if (canvas.enabled == true)
+            //{
+            //    Cursor.lockState = CursorLockMode.Locked;
+            //}
+            //else
+            //{
+            //    Cursor.lockState = CursorLockMode.Confined;
+            //}
         }
 
         xRot -= mouseY;
