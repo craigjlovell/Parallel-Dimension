@@ -19,6 +19,7 @@ public class CipherScript : MonoBehaviour
     public int trys = 3; 
 
     public TextMeshProUGUI inputs;
+    public TextMeshProUGUI CodeHint;
     public bool fire = false;
 
     private void Start()
@@ -32,6 +33,10 @@ public class CipherScript : MonoBehaviour
             {
                 noteNum.Add((int)notes[i] - 'a');
             }
+        }
+        for (int i = 0;i < noteNum.Count; i++)
+        {
+            CodeHint.text += noteNum[i] + " ";
         }
     }
 
