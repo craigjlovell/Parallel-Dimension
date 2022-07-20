@@ -12,10 +12,10 @@ public class CipherScript : MonoBehaviour
     [SerializeField] private string codeTry = "filler";
 
     [SerializeField] private List<int> noteNum = new List<int>();
-    string notes;
+    [SerializeField] private string notes;
 
-    TextMeshProUGUI riddleText;
-    string riddle = "the answer you seek is hidden on the walls";
+    public TextMeshProUGUI riddleText;
+    [SerializeField] private string riddle = "the answer you seek is hidden on the walls";
 
     public List<int> number = new List<int>();
 
@@ -46,8 +46,7 @@ public class CipherScript : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        KeyPressed();
-        
+        KeyPressed();        
 
         notes = codeAnswer;
         if (trys > 0)
@@ -78,7 +77,13 @@ public class CipherScript : MonoBehaviour
         {
             number.RemoveAt(number.Count - 1);
             notes.Remove(notes.Length - 1);
-        }        
+        }       
+        
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            codeTry = inputs.text;
+            fire = true;
+        }
     }
 
     public void KeyPressed()
@@ -108,10 +113,7 @@ public class CipherScript : MonoBehaviour
     }
 
     public void Save()
-    {
-        codeTry = inputs.text;
-        fire = true;
-
+    {        
         for (int i = 0; i < number.Count; i++)
         {
             print(number[i].ToString());

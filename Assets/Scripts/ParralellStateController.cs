@@ -26,6 +26,9 @@ public class ParralellStateController : MonoBehaviour
     //note
     public GameObject Message;
 
+    public GameObject trippy;
+    public GameObject normal;
+
     //door
 
     //state
@@ -48,6 +51,7 @@ public class ParralellStateController : MonoBehaviour
                 buttonNumber3.SetActive(false);
                 SafeNumbers.SetActive(false);
                 Message.SetActive(false);
+                normal.SetActive(false);
             }
             else
             {
@@ -61,6 +65,7 @@ public class ParralellStateController : MonoBehaviour
                 buttonNumber3.SetActive(true);
                 SafeNumbers.SetActive(true);
                 Message.SetActive(true);
+                normal.SetActive(true);
             }
             isStart = false;
         }

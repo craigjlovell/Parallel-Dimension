@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    Canvas canvas = null;
-
     public CharacterController controller;
 
     float moveX;
@@ -19,9 +17,9 @@ public class PlayerController : MonoBehaviour
 
     Vector3 velocity;
 
-    bool isKeyboard;
+    [SerializeField] private bool isKeyboard;
+    [SerializeField] private bool isGrounded;
 
-    bool isGrounded;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -30,15 +28,14 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         isKeyboard = FindObjectOfType<InputController>().keyboard;
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
-    {
-
-        isKeyboard = FindObjectOfType<InputController>().keyboard;
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
+    {        
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;

@@ -14,20 +14,19 @@ public class CameraController : MonoBehaviour
     public GameObject Collider_SimonSays;
     public GameObject Collider_Safe;
     public GameObject Collider_Computer;
-    private void Start()
+
+    public bool isZoom = false;
+
+
+    public void OnMouseDown()
     {
-        //Cursor.lockState = CursorLockMode.Locked;
-    }
-    private void OnMouseDown()
-    {
+        Cursor.lockState = CursorLockMode.Confined;
         VCam_Active.Priority = 1;
         VCam_Inactive1.Priority = 0;
         VCam_Inactive2.Priority = 0;
         VCam_Inactive3.Priority = 0;
         closeZoomCanvas.SetActive(true);
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-        //Cursor.lockState = CursorLockMode.Confined;
+        isZoom = true;        
         if (cipher != null)
         {
             cipher.enabled = true;
@@ -40,12 +39,13 @@ public class CameraController : MonoBehaviour
 
     public void CancelZoom()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         VCam_Active.Priority = 1;
         VCam_Inactive1.Priority = 0;
         VCam_Inactive2.Priority = 0;
         VCam_Inactive3.Priority = 0;
         closeZoomCanvas.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
+        isZoom = false;
         cipher.enabled = false;
         Collider_Computer.SetActive(true);
         Collider_Safe.SetActive(true);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
-    public bool keyboard;
+    public bool keyboard = false;
 
     public PlayerLook look;
 

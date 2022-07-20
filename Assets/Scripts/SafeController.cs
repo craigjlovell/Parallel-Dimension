@@ -16,6 +16,7 @@ public class SafeController : MonoBehaviour
     public int index = 0;
     public int trueCheck;
     public GameObject safeDoor;
+    public GameObject keypad;
 
 
     public void InputButton(int PIN)
@@ -72,6 +73,7 @@ public class SafeController : MonoBehaviour
         if (trueCheck == 3)
         {
             safeDoor.SetActive(false);
+            keypad.SetActive(false);
             text.text = "";
         }
         else

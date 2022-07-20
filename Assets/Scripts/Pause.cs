@@ -22,6 +22,7 @@ public class Pause : MonoBehaviour
                 Time.timeScale = 0;
                 canvas = GetComponentInParent<Canvas>();
                 canvas.enabled = false;
+                Cursor.lockState = CursorLockMode.Confined;
                 canvas = GameObject.FindGameObjectWithTag("Pause").GetComponent<Canvas>();
                 canvas.enabled = true;
             }
@@ -30,6 +31,7 @@ public class Pause : MonoBehaviour
                 Time.timeScale = 1;
                 canvas = GameObject.FindGameObjectWithTag("Pause").GetComponent<Canvas>();
                 canvas.enabled = false;
+                Cursor.lockState = CursorLockMode.Locked;
                 canvas = GameObject.FindGameObjectWithTag("Game").GetComponent<Canvas>();
                 canvas.enabled = true;
             }                        

@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    SceneManager sceneManager;
     Canvas canvas = null;
 
 
@@ -38,6 +37,7 @@ public class SceneController : MonoBehaviour
 
     public void GamePause()
     {
+        Cursor.lockState = CursorLockMode.Confined;
         Time.timeScale = 0;
         canvas = GetComponentInParent<Canvas>();
         canvas.enabled = false;
@@ -46,6 +46,7 @@ public class SceneController : MonoBehaviour
     }
     public void GameResume()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
         canvas = GetComponentInParent<Canvas>();
         canvas.enabled = false;
