@@ -35,6 +35,10 @@ public class ParralellStateController : MonoBehaviour
     public bool isOtherStateActive;
     private bool isStart = true;
 
+    private void Start()
+    {
+        trippy.SetActive(false);
+    }
     private void Update()
     {
         if (Input.GetKeyUp(KeyCode.Tab) || isStart)
@@ -44,6 +48,7 @@ public class ParralellStateController : MonoBehaviour
                 isOtherStateActive = true;
                 simonSays.enabled = true;
                 computerScreen.SetActive(true);
+                trippy.SetActive(true);
 
                 buttonNumber0.SetActive(false);
                 buttonNumber1.SetActive(false);
@@ -58,6 +63,7 @@ public class ParralellStateController : MonoBehaviour
                 isOtherStateActive = false;
                 simonSays.enabled = false;
                 computerScreen.SetActive(false);
+                trippy.SetActive(false);
 
                 buttonNumber0.SetActive(true);
                 buttonNumber1.SetActive(true);
