@@ -30,10 +30,11 @@ public class ParralellStateController : MonoBehaviour
 
     //state
     public bool isOtherStateActive;
+    private bool isStart = true;
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.Tab) || isStart)
         {
             if (!isOtherStateActive)
             {
@@ -61,6 +62,7 @@ public class ParralellStateController : MonoBehaviour
                 SafeNumbers.SetActive(true);
                 Message.SetActive(true);
             }
+            isStart = false;
         }
     }
 }
