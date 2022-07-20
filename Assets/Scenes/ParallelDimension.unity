@@ -2111,7 +2111,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: aea0e3f172f2a8343bf2b1da56a8694b, type: 3}
+  - {fileID: 2100000, guid: 11680e4cd18faa34faa8fbf2a24ff3ff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6829,6 +6829,7 @@ GameObject:
   - component: {fileID: 6081499762109645113}
   - component: {fileID: 6081499762109645116}
   - component: {fileID: 6081499762109645117}
+  - component: {fileID: 6081499762109645114}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6844,6 +6845,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6081499762109645112}
   m_Enabled: 1
+--- !u!114 &6081499762109645114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6081499762109645112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9791aec5b6467e940bc05399d4d22d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 11680e4cd18faa34faa8fbf2a24ff3ff, type: 2}
 --- !u!114 &6081499762109645116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6866,7 +6880,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
