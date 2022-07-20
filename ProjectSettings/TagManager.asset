@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Game
   - Pause
+  - Keypad
   layers:
   - Default
   - TransparentFX
