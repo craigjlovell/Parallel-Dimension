@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 045fc42157b8fbb40ac4d07669280106
+guid: 5217ab04188e7ed41936fec20adba514
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_BedFrame
+    second: {fileID: 2100000, guid: eb56bc7d3fb87c645ba70d19aea1402d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
