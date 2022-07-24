@@ -7010,7 +7010,7 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 1, b: 1, a: 0}
   index: 3
   resetDelay: 0.25
-  simonSays: {fileID: 0}
+  simonSays: {fileID: 842168847}
 --- !u!4 &3351692782430909064
 Transform:
   m_ObjectHideFlags: 0
@@ -7150,7 +7150,7 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 1, b: 1, a: 0}
   index: 1
   resetDelay: 0.25
-  simonSays: {fileID: 0}
+  simonSays: {fileID: 842168847}
 --- !u!64 &3511302784618391734
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12019,7 +12019,7 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 1, b: 1, a: 0}
   index: 2
   resetDelay: 0.25
-  simonSays: {fileID: 0}
+  simonSays: {fileID: 842168847}
 --- !u!64 &7571734346543309913
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12238,7 +12238,7 @@ MonoBehaviour:
   highlightColor: {r: 1, g: 1, b: 1, a: 0}
   index: 0
   resetDelay: 0.25
-  simonSays: {fileID: 0}
+  simonSays: {fileID: 842168847}
 --- !u!1 &8345879781945516358
 GameObject:
   m_ObjectHideFlags: 0
